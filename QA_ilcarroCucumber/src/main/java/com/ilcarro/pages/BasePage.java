@@ -35,6 +35,13 @@ public abstract class BasePage {
     public boolean isElementDisplayed(WebElement element){
         return element.isDisplayed();
     }
+    public void pause(int millis){
+        try {
+            Thread.sleep(millis);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+    }
 
     public void quit() {
         driver.quit();

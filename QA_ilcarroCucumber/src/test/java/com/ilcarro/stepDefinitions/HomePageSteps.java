@@ -21,19 +21,7 @@ public class HomePageSteps {
     public void verify_HomePage_title(){
         new HomePage(driver).isHomePageTitleDisplayed();
     }
-    @Then("User enter the city")
-    public void enter_the_city(){
-        new HomePage(driver).enterTheCity("Haifa, Israel" );
-    }
-    @Then("User enter dates")
-    public void enter_dates(){
-        new HomePage(driver).enterDates("4/29/2024 - 4/30/2024");
-    }
 
-    @Then("User click on Yalla button to find a car")
-    public void click_on_Yalla_button(){
-        new HomePage(driver).clickToFindACar();
-    }
     @And("User quites browser")
     public void quit_browser(){
         new HomePage(driver).quit();

@@ -28,26 +28,4 @@ public class HomePage extends BasePage{
         click(loginLink);
         return new LoginPage(driver);
     }
-
-    @FindBy(id = "city")
-    WebElement enterCity;
-    public HomePage enterTheCity(String findCity) {
-        type(enterCity, findCity);
-        return this;
-    }
-
-    @FindBy(id = "dates")
-    WebElement enterDates;
-    public HomePage enterDates(String dates) {
-        enterDates.clear();
-        enterDates.sendKeys(dates);
-        enterDates.sendKeys(Keys.ENTER);
-        return this;
-    }
-    @FindBy(css = "button[type='submit']")
-    WebElement submitButton;
-    public HomePage clickToFindACar() {
-        click(submitButton);
-        return new HomePage(driver);
-    }
 }
